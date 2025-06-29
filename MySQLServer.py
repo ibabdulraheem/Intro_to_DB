@@ -11,7 +11,7 @@ print(myresult)
 mydb.commit()
 if True:
   print ("Database 'alx_book_store' created successfully!")
-raise mysql.connector.errors.DatabaseError ("Database already exist")
+raise mysql.connector.Error ("Database already exist")
 
 
     
