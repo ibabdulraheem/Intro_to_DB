@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
   password = "Phoenix1982@..."
 )
 mycursor = mydb.cursor()
-myresult = mycursor.execute("create database alx_book_store")
+myresult = mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 print(myresult)
 mydb.commit()
 if True:
