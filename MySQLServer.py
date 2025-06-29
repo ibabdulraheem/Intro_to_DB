@@ -8,10 +8,11 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 myresult = mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
 print(myresult)
-mydb.commit()
-if True:
-  print ("Database 'alx_book_store' created successfully!")
-raise mysql.connector.Error ("Database already exist")
+try:
+  mydb.commit()
+  print("Database 'alx_book_store' created successfully! ")
+except mysql.connector.Error:
+    print("Database already exist")
 
 
     
