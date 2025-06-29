@@ -6,5 +6,19 @@ mydb = mysql.connector.connect(
   password = "Phoenix1982@..."
 )
 mycursor = mydb.cursor()
-myresult = mycursor.execute("CREATE DATABASE alx_book_store")
+myresult = mycursor.execute("create database alx_book_store")
+print(myresult)
 mydb.commit()
+if True:
+  print ("Database 'alx_book_store' created successfully!")
+raise mysql.connector.errors.DatabaseError ("Database already exist")
+
+
+    
+   
+
+
+
+
+ 
+  
